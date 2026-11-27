@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoMind | Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: #f4f7fb;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background: #101827;
+        }
+        .hero {
+            background: linear-gradient(120deg, #101827, #1d4ed8);
+            color: white;
+            padding: 100px 20px;
+            border-radius: 0 0 30px 30px;
+        }
+        .feature {
+            border: none;
+            border-radius: 16px;
+            transition: 0.3s;
+        }
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="{% url 'inicio' %}">
+            🚗 AutoMind
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="{% url 'inicio' %}">Inicio</a>
+                <a class="nav-link" href="{% url 'panel' %}">Panel</a>
+                <a class="btn btn-primary ms-lg-3" href="{% url 'login' %}">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Tu próximo automóvil comienza aquí</h1>
+        <p class="lead mt-4">
+            Compra y vende vehículos de manera inteligente,
+            segura y sencilla con ayuda de la inteligencia artificial.
+        </p>
+        <a href="{% url 'login' %}" class="btn btn-light btn-lg mt-3">
+            Comenzar ahora
+        </a>
+    </div>
+</section>
+
+<section class="container py-5">
+    <h2 class="text-center fw-bold mb-4">¿Qué ofrece AutoMind?</h2>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card feature shadow-sm p-4 h-100">
+                <h3>🚘 Compra inteligente</h3>
+                <p>Encuentra automóviles de acuerdo con tus necesidades y presupuesto.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card feature shadow-sm p-4 h-100">
+                <h3>🤖 Inteligencia artificial</h3>
+                <p>Obtén recomendaciones personalizadas para elegir tu próximo vehículo.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card feature shadow-sm p-4 h-100">
+                <h3>🔒 Seguridad</h3>
+                <p>Consulta información que facilite operaciones más confiables.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="text-center py-4 bg-dark text-white">
+    <p class="mb-0">© 2026 AutoMind | Compra y venta inteligente de automóviles</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
